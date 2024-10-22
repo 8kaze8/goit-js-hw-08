@@ -64,7 +64,6 @@ const images = [
   },
 ];
 
-// Galeri öğelerini dinamik olarak oluşturma
 const gallery = document.querySelector(".gallery");
 
 const galleryMarkup = images
@@ -101,7 +100,6 @@ gallery.addEventListener("click", (event) => {
 
   instance.show();
 
-  // Escape tuşuna basarak modal pencereyi kapatma
   window.addEventListener("keydown", (event) => {
     if (event.code === "Escape") {
       instance.close();
