@@ -85,6 +85,23 @@ const galleryMarkup = images
 
 gallery.innerHTML = galleryMarkup;
 
+gallery.addEventListener("mouseover", (event) => {
+  if (event.target.nodeName !== "IMG") {
+    return;
+  }
+
+  event.target.style.transform = "scale(1.05)";
+  event.target.style.transition = "transform 0.3s";
+});
+
+gallery.addEventListener("mouseout", (event) => {
+  if (event.target.nodeName !== "IMG") {
+    return;
+  }
+
+  event.target.style.transform = "scale(1)";
+});
+
 gallery.addEventListener("click", (event) => {
   event.preventDefault();
 
